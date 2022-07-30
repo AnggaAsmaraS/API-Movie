@@ -12,7 +12,7 @@ function popularMovies() {
 
         let data = response.items;
         
-        for(let i = 0; i < 5; i++) {
+        for(let i = 0; i < 10; i++) {
             let divImg = document.createElement('div');
             divImg.className = "image"
             let span = document.createElement('span')
@@ -38,7 +38,7 @@ function boxOffice() {
     .then(function(response) {
         let data = response.items;
 
-        for(let i = 0; i < 5; i++) {
+        for(let i = 0; i < 10; i++) {
             let divImg = document.createElement('div');
             divImg.className = "image"
             let span = document.createElement('span')
