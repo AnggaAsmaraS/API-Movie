@@ -69,9 +69,10 @@ function emptyToken() {
                    let div = document.createElement('div')
                    div.className = "empty"
 
-                   let p = div.createElement('p')
+                   let p = document.createElement('p')
                    p.textContent = data.errorMessage;
 
+                   div.appendChild(p);
                    article.appendChild(div)
                }
         })
