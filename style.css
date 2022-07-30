@@ -245,7 +245,7 @@ body {
     height: 201px;
     border-radius: 5px;
 }
-.imageList h5 {
+.imageList span {
     color: white;
 }
 /* end search Output */
