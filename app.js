@@ -56,6 +56,29 @@ function boxOffice() {
 }
 boxOffice()
 
+
+function emptyToken() {
+    const popularMovies = "https://imdb-api.com/en/API/MostPopularMovies/k_h64k84t3"
+        fetch(`${popularMovies}`)
+        .then(response => response.json())
+        .then(function(data) {
+               if(data.errorMessage) {
+
+                   container.remove();
+
+                   let div = document.createElement('div')
+                   div.className = "empty"
+
+                   let p = div.createElement('p')
+                   p.textContent = data.errorMessage;
+
+                   article.appendChild(div)
+               }
+        })
+    
+}
+emptyToken()
+
 // untuk film coming soon
 const trailersContent = document.querySelector('.trailers-content')
 function comingSoon() {
